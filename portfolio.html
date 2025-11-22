@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Portfolio</title>
+
+  <style>
+    /* Basic responsive layout and styling - simple and teacher-friendly */
+    :root{
+      --bg: #fbfbfb;
+      --card: #ffffff;
+      --text: #222;
+      --muted: #666;
+      --accent: #00b3b3; /* electric teal - distinctive and professional */
+      --accent-contrast: #ffffff;
+      --maxw: 900px;
+      --radius: 12px;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.45;
+      display:flex;
+      justify-content:center;
+      padding:28px 16px;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .logo{
+      width:56px;
+      height:56px;
+      border-radius:10px;
+      background:linear-gradient(135deg, var(--accent), #007f7f);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--accent-contrast);
+      font-weight:700;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    }
+
+    nav a{
+      margin-left:12px;
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:600;
+      padding:8px 10px;
+      border-radius:8px;
+    }
+    nav a.active,
+    nav a:hover{
+      background:var(--accent);
+      color:var(--accent-contrast);
+    }
+
+    main{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.06);
+      display:grid;
+      grid-template-columns: 260px 1fr;
+      gap:20px;
+    }
+
+    aside{
+      padding:10px;
+    }
+
+    .profile-pic{
+      width:100%;
+      border-radius:10px;
+      object-fit:cover;
+      height:220px;
+      background:#eee;
+      display:block;
+    }
+
+    h1{
+      margin:0 0 6px 0;
+      font-size:22px;
+    }
+    h2{ font-size:16px; margin:12px 0 8px 0; color:var(--muted);}
+
+    .accent{
+      color:var(--accent);
+      font-weight:700;
+      background: linear-gradient(90deg, rgba(0,179,179,0.12) 0%, rgba(0,179,179,0.04) 100%);
+      padding:2px 6px;
+      border-radius:6px;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(0,0,0,0.01), rgba(0,0,0,0.01));
+      padding:12px;
+      border-radius:10px;
+      margin-bottom:12px;
+    }
+
+    ul.info{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+    ul.info li{
+      margin:8px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .bio{
+      font-size:15px;
+      color:#333;
+      margin-bottom:12px;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .skill{
+      background:#f3f9f9;
+      border:1px solid rgba(0,0,0,0.03);
+      padding:6px 10px;
+      border-radius:8px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:14px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* small screen adjustments */
+    @media (max-width:720px){
+      main{ grid-template-columns: 1fr; }
+      .profile-pic{ height:180px; }
+      nav{ margin-top:10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">CS</div>
+        <div>
+          <div style="font-weight:700;">Your Name</div>
+          <div style="font-size:13px;color:var(--muted)">Computer Science Student • Portfolio</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="aboutus.html" class="active">About</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+    </header>
+
+    <main>
+      <aside>
+        <!-- change src to your photo or use uploaded image path -->
+        <img class="profile-pic" src="/mnt/data/a6e7cb46-aa68-44e4-ab14-cbb297ead243.png" alt="Profile picture">
+
+        <div class="card">
+          <h2>Contact</h2>
+          <ul class="info">
+            <li>Email: your.email@example.com</li>
+            <li>Phone: +92 300 0000000</li>
+            <li>Location: Lahore, Pakistan</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Skills</h2>
+          <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">C++</div>
+            <div class="skill">Java</div>
+            <div class="skill">Problem Solving</div>
+          </div>
+        </div>
+      </aside>
+
+      <section>
+        <h1>About Me — <span class="accent">Dedicated</span></h1>
+
+        <p class="bio">
+          <strong>Dedicated Computer Science undergraduate</strong> with a strong interest in technology and innovation. Quick to adapt, eager to learn, and skilled in collaborative work. Seeking an internship opportunity to apply academic knowledge, gain practical experience, and contribute to organizational goals.
+        </p>
+
+        <div class="card">
+          <h2>Education</h2>
+          <p style="margin:6px 0 0 0;color:var(--muted)">BSc Computer Science — Your College Name (expected 2026) </p>
+        </div>
+
+        <div class="card">
+          <h2>Achievements</h2>
+          <ul class="info" style="margin-top:8px;">
+            <li>Dean’s list / good GPA (if applicable)</li>
+            <li>Completed mini projects: portfolio website, simple library management (C++)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>What I’m learning</h2>
+          <p style="color:var(--muted); margin:6px 0 0 0;">Responsive web design, data structures, and version control (Git/GitHub).</p>
+        </div>
+
+        <footer>
+          <small>Make sure to replace placeholder text & images with your real details. Good luck — present confidently!</small>
+        </footer>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
